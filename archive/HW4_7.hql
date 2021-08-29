@@ -1,0 +1,12 @@
+USE acn2021q3_stadnikov;
+
+DROP TABLE IF EXISTS subnets;
+
+CREATE EXTERNAL TABLE subnets (
+    ip STRING,
+    mask STRING
+)
+ROW FORMAT DELIMITED
+    FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE
+LOCATION '/data/subnets/variant1';
