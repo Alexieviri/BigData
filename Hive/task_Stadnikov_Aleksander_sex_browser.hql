@@ -1,0 +1,1 @@
+select browser, sum(if(sex = "male", 1, 0)) as m, sum(if(sex = "female", 1, 0)) as f from users as u  join logs as l on u.ip = l.ip group by browser limit 10;
