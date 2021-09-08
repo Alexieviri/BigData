@@ -1,0 +1,1 @@
+SELECT `date`, COUNT(request) AS Popular FROM logs GROUP BY `date` ORDER BY Popular DESC LIMIT 10;
